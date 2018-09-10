@@ -9,22 +9,13 @@ namespace Vidly.Controllers
         public ActionResult Random()
         {
             var movie = new Movie { Name = "Shrek" };
-            //return View(movie);
-            return RedirectToAction("Index", "Home");
+            return View(movie);
         }
 
-        public ActionResult Edit(int id)
+        [Route("movies/released/{year:regex(\\d{4})}/{month:regex(\\d{2}):range(1, 12)}")]
+        public ActionResult ByReleaseDate(int year, int month)
         {
-            return Content("id=" + id);
-        }
-
-        public ActionResult Index(int? pageIndex, string sortBy)
-        {
-            if (!pageIndex.HasValue) pageIndex = 1;
-
-            if (string.IsNullOrEmpty(sortBy)) sortBy = "Name";
-
-            return Content($"pageIndex={pageIndex}&sortBy={sortBy}");
+            return Content($"{year}/{month}");
         }
     }
 }
