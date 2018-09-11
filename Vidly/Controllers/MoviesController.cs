@@ -26,33 +26,43 @@ namespace Vidly.Controllers
             return View(movies);    
         }
 
-        public ActionResult Details(int id)
+        public ActionResult Edit(int id)
         {
             var movie = _context.Movies.Include(m => m.Genre).SingleOrDefault(m => m.Id == id);
 
             if (movie == null)
                 return HttpNotFound();
 
-            return View(movie);
+            var genres = _context.Genres.ToList();
+            var viewModel = new MovieFormViewModel { Genres = genres, Movie = movie};
+
+            return View("MovieForm", viewModel);
         }
 
-        // GET: Movies/Random
-        public ActionResult Random()
+        public ActionResult New()
         {
-            var movie = new Movie() { Name = "Shrek!" };
-            var customers = new List<Customer>
-            {
-                new Customer { Name = "Customer 1" },
-                new Customer { Name = "Customer 2" }
-            };
+            var genres = _context.Genres.ToList();
+            var viewModel = new MovieFormViewModel { Genres = genres };
 
-            var viewModel = new RandomMovieViewModel
-            {
-                Movie = movie,
-                Customers = customers
-            };
+            return View("MovieForm", viewModel);
+        }
 
-            return View(viewModel);
+        public ActionResult Save(Movie movie)
+        {
+            if (movie.Id == 0)
+                _context.Movies.Add(movie);
+            else
+            {
+                var movieInDb = _context.Movies.Single(c => c.Id == movie.Id);
+                movieInDb.Name = movie.Name;
+                movieInDb.DateAdded = movie.DateAdded;
+                movieInDb.ReleaseDate = movie.ReleaseDate;
+                movieInDb.GenreId = movie.GenreId;
+                movieInDb.NumberInStock = movie.NumberInStock;
+            }
+
+            _context.SaveChanges();
+            return RedirectToAction("Index", "Movies");
         }
     }
 }
