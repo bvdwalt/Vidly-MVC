@@ -193,8 +193,29 @@
     <Compile Include="Migrations\201809110437406_SeedInMembershipTypeNames.Designer.cs">
       <DependentUpon>201809110437406_SeedInMembershipTypeNames.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809110443435_AddedBirthDateToCustomer.cs" />
+    <Compile Include="Migrations\201809110443435_AddedBirthDateToCustomer.Designer.cs">
+      <DependentUpon>201809110443435_AddedBirthDateToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809110500309_AddGenre.cs" />
+    <Compile Include="Migrations\201809110500309_AddGenre.Designer.cs">
+      <DependentUpon>201809110500309_AddGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809110507571_SeedInGenresAndCustomerBirthdateNullable.cs" />
+    <Compile Include="Migrations\201809110507571_SeedInGenresAndCustomerBirthdateNullable.Designer.cs">
+      <DependentUpon>201809110507571_SeedInGenresAndCustomerBirthdateNullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809110508366_SeedGenres.cs" />
+    <Compile Include="Migrations\201809110508366_SeedGenres.Designer.cs">
+      <DependentUpon>201809110508366_SeedGenres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809110532360_AddedFieldsToMovie.cs" />
+    <Compile Include="Migrations\201809110532360_AddedFieldsToMovie.Designer.cs">
+      <DependentUpon>201809110532360_AddedFieldsToMovie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\MyDBContext.cs" />
@@ -245,6 +266,7 @@
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -283,6 +305,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201809110437406_SeedInMembershipTypeNames.resx">
       <DependentUpon>201809110437406_SeedInMembershipTypeNames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809110443435_AddedBirthDateToCustomer.resx">
+      <DependentUpon>201809110443435_AddedBirthDateToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809110500309_AddGenre.resx">
+      <DependentUpon>201809110500309_AddGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809110507571_SeedInGenresAndCustomerBirthdateNullable.resx">
+      <DependentUpon>201809110507571_SeedInGenresAndCustomerBirthdateNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809110508366_SeedGenres.resx">
+      <DependentUpon>201809110508366_SeedGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809110532360_AddedFieldsToMovie.resx">
+      <DependentUpon>201809110532360_AddedFieldsToMovie.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
