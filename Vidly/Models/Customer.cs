@@ -7,10 +7,10 @@ namespace Vidly.Models
     {
         public int Id { get; set; }
 
-        [Required, StringLength(250)]
+        [Required(ErrorMessage = "Please fill in the customer's name"), StringLength(250)]
         public string Name { get; set; }
 
-        [Display(Name = "Date of Birth")]
+        [Display(Name = "Date of Birth"), Min18YearsIfAMember]
         public DateTime? BirthDate { get; set; }
 
         public bool IsSubscribedToNewsLetter { get; set; }

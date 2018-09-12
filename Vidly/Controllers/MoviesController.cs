@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System;
 using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
@@ -23,7 +23,7 @@ namespace Vidly.Controllers
         {
             var movies = _context.Movies.Include(m => m.Genre).ToList();
 
-            return View(movies);    
+            return View(movies);
         }
 
         public ActionResult Edit(int id)
@@ -34,7 +34,10 @@ namespace Vidly.Controllers
                 return HttpNotFound();
 
             var genres = _context.Genres.ToList();
-            var viewModel = new MovieFormViewModel { Genres = genres, Movie = movie};
+            var viewModel = new MovieFormViewModel(movie)
+            {
+                Genres = genres
+            };
 
             return View("MovieForm", viewModel);
         }
@@ -42,20 +45,34 @@ namespace Vidly.Controllers
         public ActionResult New()
         {
             var genres = _context.Genres.ToList();
-            var viewModel = new MovieFormViewModel { Genres = genres };
+            var viewModel = new MovieFormViewModel() { Genres = genres };
 
             return View("MovieForm", viewModel);
         }
 
+        [ValidateAntiForgeryToken]
+        [HttpPost]
         public ActionResult Save(Movie movie)
         {
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new MovieFormViewModel(movie)
+                {
+                    Genres = _context.Genres.ToList()
+                };
+                return View("MovieForm", viewModel);
+            }
+
             if (movie.Id == 0)
+            {
+                movie.DateAdded = DateTime.UtcNow;
                 _context.Movies.Add(movie);
+            }
             else
             {
                 var movieInDb = _context.Movies.Single(c => c.Id == movie.Id);
                 movieInDb.Name = movie.Name;
-                movieInDb.DateAdded = movie.DateAdded;
+                movieInDb.DateAdded = movieInDb.DateAdded == DateTime.MinValue ? DateTime.UtcNow : movieInDb.DateAdded;
                 movieInDb.ReleaseDate = movie.ReleaseDate;
                 movieInDb.GenreId = movie.GenreId;
                 movieInDb.NumberInStock = movie.NumberInStock;
