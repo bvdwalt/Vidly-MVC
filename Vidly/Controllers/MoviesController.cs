@@ -9,10 +9,10 @@ namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
-        private MyDbContext _context;
+        private ApplicationDbContext _context;
         public MoviesController()
         {
-            _context = new MyDbContext();
+            _context = new ApplicationDbContext();
         }
         protected override void Dispose(bool disposing)
         {
@@ -21,9 +21,10 @@ namespace Vidly.Controllers
 
         public ViewResult Index()
         {
-            return View();
+            return View(User.IsInRole(RoleName.CanManageMovie) ? "List" : "ReadOnlyList");
         }
 
+        [Authorize(Roles = RoleName.CanManageMovie)]
         public ActionResult Edit(int id)
         {
             var movie = _context.Movies.Include(m => m.Genre).SingleOrDefault(m => m.Id == id);
@@ -40,6 +41,7 @@ namespace Vidly.Controllers
             return View("MovieForm", viewModel);
         }
 
+        [Authorize(Roles = RoleName.CanManageMovie)]
         public ActionResult New()
         {
             var genres = _context.Genres.ToList();
@@ -48,6 +50,7 @@ namespace Vidly.Controllers
             return View("MovieForm", viewModel);
         }
 
+        [Authorize(Roles = RoleName.CanManageMovie)]
         [ValidateAntiForgeryToken]
         [HttpPost]
         public ActionResult Save(Movie movie)
@@ -77,7 +80,7 @@ namespace Vidly.Controllers
             }
 
             _context.SaveChanges();
-            return RedirectToAction("Index", "Movies");
+            return View(User.IsInRole(RoleName.CanManageMovie) ? "List" : "ReadOnlyList");
         }
     }
 }

@@ -12,11 +12,11 @@ namespace Vidly.Controllers.API
 {
     public class MoviesController : ApiController
     {
-        private MyDbContext _context;
+        private ApplicationDbContext _context;
 
         public MoviesController()
         {
-            _context = new MyDbContext();
+            _context = new ApplicationDbContext();
         }
 
         public IEnumerable<MovieDto> GetMovies()
@@ -27,6 +27,7 @@ namespace Vidly.Controllers.API
                 .Select(Mapper.Map<Movie, MovieDto>);
         }
 
+        [Authorize(Roles = RoleName.CanManageMovie)]
         public IHttpActionResult GetMovie(int id)
         {
             var movie = _context.Movies.SingleOrDefault(c => c.Id == id);
@@ -36,6 +37,7 @@ namespace Vidly.Controllers.API
             return Ok(Mapper.Map<Movie, MovieDto>(movie));
         }
 
+        [Authorize(Roles = RoleName.CanManageMovie)]
         [HttpPost]
         public IHttpActionResult CreateMovie(MovieDto movieDto)
         {
@@ -51,6 +53,7 @@ namespace Vidly.Controllers.API
             return Created(new Uri(Request.RequestUri + "/" + movieDto.Id), movieDto);
         }
 
+        [Authorize(Roles = RoleName.CanManageMovie)]
         [HttpPut]
         public void UpdateMovie(int id, MovieDto movieDto)
         {
@@ -67,6 +70,7 @@ namespace Vidly.Controllers.API
             _context.SaveChanges();
         }
 
+        [Authorize(Roles = RoleName.CanManageMovie)]
         [HttpDelete]
         public void DeleteMovie(int id)
         {

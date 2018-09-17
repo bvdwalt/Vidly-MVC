@@ -8,7 +8,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{DA76D87D-E24F-41F8-A1B0-0722A799C2F3}</ProjectGuid>
+    <ProjectGuid>{AAC1A333-E0CF-44E1-81BE-F714966CF85D}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -18,7 +18,7 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort />
+    <IISExpressSSLPort>44371</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -45,40 +45,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoMapper, Version=4.1.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
-      <HintPath>..\packages\AutoMapper.4.1.0\lib\net45\AutoMapper.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.2\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.2\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    <Reference Include="AutoMapper, Version=4.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.4.1.1\lib\net45\AutoMapper.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
-    </Reference>
-    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
-      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -154,6 +124,51 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.2\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.2\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.4.0.0\lib\net451\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.0.0\lib\net451\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.0.0\lib\net451\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.4.0.0\lib\net451\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.4.0.0\lib\net451\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.4.0.0\lib\net451\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.4.0.0\lib\net451\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.4.0.0\lib\net451\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.4.0.0\lib\net451\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
     <Reference Include="System.Diagnostics.DiagnosticSource">
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
@@ -188,13 +203,17 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\MappingProfile.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\API\CustomersController.cs" />
     <Compile Include="Controllers\API\MoviesController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Dtos\CustomerDto.cs" />
     <Compile Include="Dtos\GenreDto.cs" />
@@ -203,68 +222,39 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201809101134252_initialModel.cs" />
-    <Compile Include="Migrations\201809101134252_initialModel.Designer.cs">
-      <DependentUpon>201809101134252_initialModel.cs</DependentUpon>
+    <Compile Include="Migrations\201809170436187_initial.cs" />
+    <Compile Include="Migrations\201809170436187_initial.Designer.cs">
+      <DependentUpon>201809170436187_initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201809101140189_AddCustomer_IsSubscribedToNewsLetter.cs" />
-    <Compile Include="Migrations\201809101140189_AddCustomer_IsSubscribedToNewsLetter.Designer.cs">
-      <DependentUpon>201809101140189_AddCustomer_IsSubscribedToNewsLetter.cs</DependentUpon>
+    <Compile Include="Migrations\201809170438277_SeedMembershipTypes.cs" />
+    <Compile Include="Migrations\201809170438277_SeedMembershipTypes.Designer.cs">
+      <DependentUpon>201809170438277_SeedMembershipTypes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201809101207067_AddedMembershipTypeToCustomer.cs" />
-    <Compile Include="Migrations\201809101207067_AddedMembershipTypeToCustomer.Designer.cs">
-      <DependentUpon>201809101207067_AddedMembershipTypeToCustomer.cs</DependentUpon>
+    <Compile Include="Migrations\201809170558317_SeedUsers.cs" />
+    <Compile Include="Migrations\201809170558317_SeedUsers.Designer.cs">
+      <DependentUpon>201809170558317_SeedUsers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201809101208362_SeedMembershipTypes.cs" />
-    <Compile Include="Migrations\201809101208362_SeedMembershipTypes.Designer.cs">
-      <DependentUpon>201809101208362_SeedMembershipTypes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201809110420120_ApplyAnnotationsToCustoerNmae.cs" />
-    <Compile Include="Migrations\201809110420120_ApplyAnnotationsToCustoerNmae.Designer.cs">
-      <DependentUpon>201809110420120_ApplyAnnotationsToCustoerNmae.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201809110436555_AddMembershipTypeName.cs" />
-    <Compile Include="Migrations\201809110436555_AddMembershipTypeName.Designer.cs">
-      <DependentUpon>201809110436555_AddMembershipTypeName.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201809110437406_SeedInMembershipTypeNames.cs" />
-    <Compile Include="Migrations\201809110437406_SeedInMembershipTypeNames.Designer.cs">
-      <DependentUpon>201809110437406_SeedInMembershipTypeNames.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201809110443435_AddedBirthDateToCustomer.cs" />
-    <Compile Include="Migrations\201809110443435_AddedBirthDateToCustomer.Designer.cs">
-      <DependentUpon>201809110443435_AddedBirthDateToCustomer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201809110500309_AddGenre.cs" />
-    <Compile Include="Migrations\201809110500309_AddGenre.Designer.cs">
-      <DependentUpon>201809110500309_AddGenre.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201809110507571_SeedInGenresAndCustomerBirthdateNullable.cs" />
-    <Compile Include="Migrations\201809110507571_SeedInGenresAndCustomerBirthdateNullable.Designer.cs">
-      <DependentUpon>201809110507571_SeedInGenresAndCustomerBirthdateNullable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201809110508366_SeedGenres.cs" />
-    <Compile Include="Migrations\201809110508366_SeedGenres.Designer.cs">
-      <DependentUpon>201809110508366_SeedGenres.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201809110532360_AddedFieldsToMovie.cs" />
-    <Compile Include="Migrations\201809110532360_AddedFieldsToMovie.Designer.cs">
-      <DependentUpon>201809110532360_AddedFieldsToMovie.cs</DependentUpon>
+    <Compile Include="Migrations\201809170623465_AddedUserDrivingLicense.cs" />
+    <Compile Include="Migrations\201809170623465_AddedUserDrivingLicense.Designer.cs">
+      <DependentUpon>201809170623465_AddedUserDrivingLicense.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Genre.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Min18YearsIfAMember.cs" />
     <Compile Include="Models\Movie.cs" />
-    <Compile Include="Models\MyDBContext.cs" />
+    <Compile Include="Models\RoleName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModel\MovieFormViewModel.cs" />
+    <Compile Include="Startup.cs" />
     <Compile Include="ViewModel\CustomerFormViewModel.cs" />
+    <Compile Include="ViewModel\MovieFormViewModel.cs" />
     <Compile Include="ViewModel\RandomMovieViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-lumen.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -380,8 +370,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\bootbox.js" />
-    <Content Include="Scripts\bootbox.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -390,70 +378,6 @@
     <Content Include="Content\DataTables\css\mixins.scss" />
     <Content Include="Content\DataTables\css\common.scss" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
-    <Content Include="Scripts\DataTables\autoFill.bootstrap.js" />
-    <Content Include="Scripts\DataTables\autoFill.bootstrap.min.js" />
-    <Content Include="Scripts\DataTables\autoFill.foundation.js" />
-    <Content Include="Scripts\DataTables\autoFill.foundation.min.js" />
-    <Content Include="Scripts\DataTables\autoFill.jqueryui.js" />
-    <Content Include="Scripts\DataTables\autoFill.jqueryui.min.js" />
-    <Content Include="Scripts\DataTables\buttons.bootstrap.js" />
-    <Content Include="Scripts\DataTables\buttons.bootstrap.min.js" />
-    <Content Include="Scripts\DataTables\buttons.bootstrap4.js" />
-    <Content Include="Scripts\DataTables\buttons.bootstrap4.min.js" />
-    <Content Include="Scripts\DataTables\buttons.colVis.js" />
-    <Content Include="Scripts\DataTables\buttons.colVis.min.js" />
-    <Content Include="Scripts\DataTables\buttons.flash.js" />
-    <Content Include="Scripts\DataTables\buttons.flash.min.js" />
-    <Content Include="Scripts\DataTables\buttons.foundation.js" />
-    <Content Include="Scripts\DataTables\buttons.foundation.min.js" />
-    <Content Include="Scripts\DataTables\buttons.html5.js" />
-    <Content Include="Scripts\DataTables\buttons.html5.min.js" />
-    <Content Include="Scripts\DataTables\buttons.jqueryui.js" />
-    <Content Include="Scripts\DataTables\buttons.jqueryui.min.js" />
-    <Content Include="Scripts\DataTables\buttons.print.js" />
-    <Content Include="Scripts\DataTables\buttons.print.min.js" />
-    <Content Include="Scripts\DataTables\dataTables.autoFill.js" />
-    <Content Include="Scripts\DataTables\dataTables.autoFill.min.js" />
-    <Content Include="Scripts\DataTables\dataTables.bootstrap.js" />
-    <Content Include="Scripts\DataTables\dataTables.bootstrap.min.js" />
-    <Content Include="Scripts\DataTables\dataTables.bootstrap4.js" />
-    <Content Include="Scripts\DataTables\dataTables.bootstrap4.min.js" />
-    <Content Include="Scripts\DataTables\dataTables.buttons.js" />
-    <Content Include="Scripts\DataTables\dataTables.buttons.min.js" />
-    <Content Include="Scripts\DataTables\dataTables.colReorder.js" />
-    <Content Include="Scripts\DataTables\dataTables.colReorder.min.js" />
-    <Content Include="Scripts\DataTables\dataTables.fixedColumns.js" />
-    <Content Include="Scripts\DataTables\dataTables.fixedColumns.min.js" />
-    <Content Include="Scripts\DataTables\dataTables.fixedHeader.js" />
-    <Content Include="Scripts\DataTables\dataTables.fixedHeader.min.js" />
-    <Content Include="Scripts\DataTables\dataTables.foundation.js" />
-    <Content Include="Scripts\DataTables\dataTables.foundation.min.js" />
-    <Content Include="Scripts\DataTables\dataTables.jqueryui.js" />
-    <Content Include="Scripts\DataTables\dataTables.jqueryui.min.js" />
-    <Content Include="Scripts\DataTables\dataTables.keyTable.js" />
-    <Content Include="Scripts\DataTables\dataTables.keyTable.min.js" />
-    <Content Include="Scripts\DataTables\dataTables.material.js" />
-    <Content Include="Scripts\DataTables\dataTables.material.min.js" />
-    <Content Include="Scripts\DataTables\dataTables.responsive.js" />
-    <Content Include="Scripts\DataTables\dataTables.responsive.min.js" />
-    <Content Include="Scripts\DataTables\dataTables.rowReorder.js" />
-    <Content Include="Scripts\DataTables\dataTables.rowReorder.min.js" />
-    <Content Include="Scripts\DataTables\dataTables.scroller.js" />
-    <Content Include="Scripts\DataTables\dataTables.scroller.min.js" />
-    <Content Include="Scripts\DataTables\dataTables.select.js" />
-    <Content Include="Scripts\DataTables\dataTables.select.min.js" />
-    <Content Include="Scripts\DataTables\dataTables.semanticui.js" />
-    <Content Include="Scripts\DataTables\dataTables.semanticui.min.js" />
-    <Content Include="Scripts\DataTables\dataTables.uikit.js" />
-    <Content Include="Scripts\DataTables\dataTables.uikit.min.js" />
-    <Content Include="Scripts\DataTables\jquery.dataTables.js" />
-    <Content Include="Scripts\DataTables\jquery.dataTables.min.js" />
-    <Content Include="Scripts\DataTables\responsive.bootstrap.js" />
-    <Content Include="Scripts\DataTables\responsive.bootstrap.min.js" />
-    <Content Include="Scripts\DataTables\responsive.foundation.js" />
-    <Content Include="Scripts\DataTables\responsive.foundation.min.js" />
-    <Content Include="Scripts\DataTables\responsive.jqueryui.js" />
-    <Content Include="Scripts\DataTables\responsive.jqueryui.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
@@ -478,13 +402,35 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Customers\CustomerForm.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
-    <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Views\Movies\Details.cshtml" />
-    <Content Include="Views\Customers\CustomerForm.cshtml" />
+    <Content Include="Views\Movies\List.cshtml" />
     <Content Include="Views\Movies\MovieForm.cshtml" />
+    <Content Include="Views\Movies\Random.cshtml" />
+    <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\Movies\ReadOnlyList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -503,41 +449,17 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201809101134252_initialModel.resx">
-      <DependentUpon>201809101134252_initialModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201809170436187_initial.resx">
+      <DependentUpon>201809170436187_initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201809101140189_AddCustomer_IsSubscribedToNewsLetter.resx">
-      <DependentUpon>201809101140189_AddCustomer_IsSubscribedToNewsLetter.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201809170438277_SeedMembershipTypes.resx">
+      <DependentUpon>201809170438277_SeedMembershipTypes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201809101207067_AddedMembershipTypeToCustomer.resx">
-      <DependentUpon>201809101207067_AddedMembershipTypeToCustomer.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201809170558317_SeedUsers.resx">
+      <DependentUpon>201809170558317_SeedUsers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201809101208362_SeedMembershipTypes.resx">
-      <DependentUpon>201809101208362_SeedMembershipTypes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201809110420120_ApplyAnnotationsToCustoerNmae.resx">
-      <DependentUpon>201809110420120_ApplyAnnotationsToCustoerNmae.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201809110436555_AddMembershipTypeName.resx">
-      <DependentUpon>201809110436555_AddMembershipTypeName.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201809110437406_SeedInMembershipTypeNames.resx">
-      <DependentUpon>201809110437406_SeedInMembershipTypeNames.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201809110443435_AddedBirthDateToCustomer.resx">
-      <DependentUpon>201809110443435_AddedBirthDateToCustomer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201809110500309_AddGenre.resx">
-      <DependentUpon>201809110500309_AddGenre.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201809110507571_SeedInGenresAndCustomerBirthdateNullable.resx">
-      <DependentUpon>201809110507571_SeedInGenresAndCustomerBirthdateNullable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201809110508366_SeedGenres.resx">
-      <DependentUpon>201809110508366_SeedGenres.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201809110532360_AddedFieldsToMovie.resx">
-      <DependentUpon>201809110532360_AddedFieldsToMovie.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201809170623465_AddedUserDrivingLicense.resx">
+      <DependentUpon>201809170623465_AddedUserDrivingLicense.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
@@ -556,9 +478,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>52288</DevelopmentServerPort>
+          <DevelopmentServerPort>49898</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:52288/</IISUrl>
+          <IISUrl>https://localhost:44371/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
